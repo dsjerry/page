@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录/注册</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="spotlight-box" id="spotlight">
+      <h1 data-spotlight="在线洽谈系统" class="spotlight-text">在线洽谈系统</h1>
+      <div class="spotlight-other">
+        <p class="spotlight-other-text">💬 Online negotiation</p>
+        <p class="spotlight-other-text">📇 管理你的平台</p>
+      </div>
+    </div>
+    <div class="main main-style" id="main">
+      <div class="title" data-spotlight="用户登录">用户登录</div>
+      <form action="#" class="form">
+        <div class="form-item">
+          <input
+            type="text"
+            id="username"
+            class="form-item-input"
+            placeholder="用户名"
+            maxlength="8"
+            minlength="8"
+            required
+            pattern="^[0-9]*$"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-item">
+          <input
+            type="password"
+            id="password"
+            class="form-item-input"
+            placeholder="密码"
+            maxlength="8"
+            minlength="8"
+            required
+            pattern="^[A-Za-z0-9]+$"
+          />
+        </div>
+        <div class="form-item form-verify">
+          <div>
+            <canvas id="canvas" width="90" height="30">
+              您的浏览器不支持 HTML5 canvas 标签。
+            </canvas>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="verify"
+              class="form-item-input"
+              maxlength="4"
+              placeholder="验证码"
+              required
+              pattern="^[A-Za-z0-9]+$"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="form-item">
+          <input
+            type="submit"
+            value="登录"
+            class="form-btn form-btn-login"
+            id="login"
+          />
+        </div>
+        <div class="form-item form-item-margin">
+          <input
+            type="button"
+            value="注册"
+            class="form-btn form-btn-register"
+            id="register"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>
