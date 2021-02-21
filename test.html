@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>验证码</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvas" width="100" height="40"
+        >浏览器不支持 HTML5 canvas 标签</canvas
+      >
+    </div>
+  </body>
+  <script>
+    // 验证码
+    let code = ''
+    const canvas = document.getElementById('canvas')
+    createCode(4)
+    canvas.addEventListener('click', () => {
+      createCode(4)
+    })
+    //生成验证码的方法
+    function createCode(length) {
+      // console.log(createCode)
+      code = ''
+      //验证码的长度
+      let codeLength = parseInt(length)
+      //  生成的验证码内容
+      let codeChars = new Array(
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'f',
+        'g',
+        'h',
+        'i',
+        'j',
+        'k',
+        'l',
+        'm',
+        'n',
+        'o',
+        'p',
+        'q',
+        'r',
+        's',
+        't',
+        'u',
+        'v',
+        'w',
+        'x',
+        'y',
+        'z',
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        'G',
+        'H',
+        'I',
+        'J',
+        'K',
+        'L',
+        'M',
+        'N',
+        'O',
+        'P',
+        'Q',
+        'R',
+        'S',
+        'T',
+        'U',
+        'V',
+        'W',
+        'X',
+        'Y',
+        'Z'
+      )
+      //循环组成验证码的字符串
+      for (let i = 0; i < codeLength; i++) {
+        //获取随机验证码下标
+        let charNum = Math.floor(Math.random() * 60)
+
+        //组合成指定字符验证码
+        code += codeChars[charNum]
+      }
+      if (code) {
+        // let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+        let img = document.createElement('img')
+        img.src = './images/verify.png'
+        img.onload = function () {
+          ctx.drawImage(img, 0, 0, 90, 40)
+          ctx.font = '20px Verdana'
+          // 创建一个渐变
+          let gradient = ctx.createLinearGradient(0, 0, canvas.width, 0)
+          gradient.addColorStop('0', 'darkorange')
+          gradient.addColorStop('0.4', 'blue')
+          gradient.addColorStop('0.5', 'darkgreen')
+          gradient.addColorStop('0.6', 'orange')
+          gradient.addColorStop('0.7', 'darkcyan')
+          // 填充一个渐变
+          ctx.fillStyle = gradient
+          ctx.fillText(code[0], 15, 20 + Math.floor(Math.random() * 6))
+          ctx.fillText(code[1], 25, 20 + Math.floor(Math.random() * 6))
+          ctx.fillText(code[2], 45, 20 + Math.floor(Math.random() * 6))
+          ctx.fillText(code[3], 60, 20 + Math.floor(Math.random() * 6))
+        }
+      }
+    }
+  </script>
+</html>

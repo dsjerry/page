@@ -162,5 +162,5 @@ register.onclick = function () {
   main.classList.add('main-register')
   setInterval(() => {
     window.location.assign('./page/register/register.html')
-  }, 1400)
+  }, 900)
 }

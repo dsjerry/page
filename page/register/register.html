@@ -8,168 +8,193 @@
   </head>
   <body>
     <div class="main main-style" id="main">
+      <!-- 标题 -->
       <div class="title" data-spotlight="用户注册">用户注册</div>
+      <!-- 表单步骤条 -->
+      <div class="step">
+        <span class="step-item step-item-circle step-item-circle-finish"
+          >1</span
+        >
+        <span class="step-item step-item-road"></span>
+        <span class="step-item step-item-circle step-item-circle-blank">2</span>
+        <span class="step-item step-item-road"></span>
+        <span class="step-item step-item-circle step-item-circle-blank">3</span>
+      </div>
+      <!-- 表单内容 -->
       <form action="#" class="form">
         <div class="" id="formPageOne">
-          <div class="form-item">
-            <input
-              type="text"
-              id="username"
-              class="form-item-input"
-              placeholder="登记号"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[0-9]*$"
-              autocomplete="off"
-            />
+          <div class="form-col">
+            <div class="form-item">
+              <input
+                type="text"
+                id="username"
+                class="form-item-input"
+                placeholder="登记号"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[0-9]*$"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input"
+                placeholder="管理员BQ"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
           </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="管理员BQ"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
+          <div class="form-col">
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input"
+                placeholder="管理密码"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input"
+                placeholder="确认密码"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
           </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="管理密码"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
-          </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="确认密码"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
-          </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="公司名称"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
-          </div>
-          <div class="form-item form-item-switch">
-            <input
-              type="button"
-              value="后退"
-              class="form-btn form-btn-last"
-              id="back"
-            />
-            <input
-              type="button"
-              value="前进"
-              class="form-btn form-btn-next"
-              id="next"
-            />
+          <div class="form-col form-col2">
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input form-item-input-long"
+                placeholder="公司名称"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-item form-item-switch">
+              <input
+                type="button"
+                value="后退"
+                class="form-btn form-btn-last"
+                id="back"
+              />
+              <input
+                type="button"
+                value="前进"
+                class="form-btn form-btn-next"
+                id="next"
+              />
+            </div>
           </div>
         </div>
+        <!-- 第二页 -->
         <div class="form-page-two" id="formPageTwo">
-          <div class="form-item">
-            <input
-              type="text"
-              id="username"
-              class="form-item-input"
-              placeholder="E-mail"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[0-9]*$"
-              autocomplete="off"
-            />
+          <div class="form-col">
+            <div class="form-item">
+              <input
+                type="text"
+                id="username"
+                class="form-item-input"
+                placeholder="E-mail"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[0-9]*$"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input"
+                placeholder="网址"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
           </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="网址"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
+          <div class="form-col">
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input"
+                placeholder="洽谈方式"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input"
+                placeholder="洽谈标题"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
           </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="洽谈方式"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
-          </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="洽谈标题"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
-          </div>
-          <div class="form-item">
-            <input
-              type="text"
-              id="password"
-              class="form-item-input"
-              placeholder="电话"
-              maxlength="8"
-              minlength="8"
-              required
-              pattern="^[A-Za-z0-9]+$"
-              autocomplete="off"
-            />
-          </div>
-          <div class="form-item form-item-switch">
-            <input
-              type="button"
-              value="后退"
-              class="form-btn form-btn-last"
-              id="back"
-            />
-            <input
-              type="button"
-              value="前进"
-              class="form-btn form-btn-next"
-              id="next"
-            />
+          <div class="form-col form-col2">
+            <div class="form-item">
+              <input
+                type="text"
+                id="password"
+                class="form-item-input"
+                placeholder="电话"
+                maxlength="8"
+                minlength="8"
+                required
+                pattern="^[A-Za-z0-9]+$"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-item form-item-switch">
+              <input
+                type="button"
+                value="后退"
+                class="form-btn form-btn-last"
+                id="back"
+              />
+              <input
+                type="button"
+                value="前进"
+                class="form-btn form-btn-next"
+                id="next"
+              />
+            </div>
           </div>
         </div>
       </form>

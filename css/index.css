@@ -15,10 +15,11 @@ body{
   width: 20vw;
   height: 50vh;
   min-width: 20vw;
-  /* background-color: whitesmoke; */
-  background: linear-gradient(45deg, #005897, whitesmoke);
+  background-color: white;
+  /* background: linear-gradient(45deg, #005897, whitesmoke); */
   border-radius: 10px;
-  box-shadow: 0px 0px 60px #005897;
+  /* box-shadow: 0px 0px 60px #005897; */
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,14 +31,14 @@ body{
   top: 25%;
   transform: translateX(-50%);
 }
-
+/* 前往注册页面 */
 .spotlight-box-register{
-  transition: 1.5s ease-out;
+  transition: 1s ease-out;
   transform: translateX(-200%);
 }
 .main-register{
-  transition: 1.5s ease-out;
-  width: 30vw;
+  transition: 1s ease-out;
+  width: 40vw;
   height: 70vh;
   left: 50%;
 }
@@ -92,6 +93,7 @@ body{
   color:#005fa3;
   font-weight: bolder;
   cursor: pointer;
+
 }
 .title::before{
   content: attr(data-spotlight);
@@ -151,6 +153,7 @@ body{
   height: 80%;
   border-radius: 5px;
   border: none;
+  margin-top: 20px;
   /* border: 1px solid gainsboro; */
 }
 .form-btn-login{
