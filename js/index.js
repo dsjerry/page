@@ -1,5 +1,5 @@
 // 表单验证
-var username = document.getElementById('username')
+const username = document.getElementById('username')
 username.addEventListener('input', () => {
   username.setCustomValidity('')
   username.checkValidity()
@@ -14,7 +14,7 @@ username.addEventListener('invalid', (e) => {
     username.setCustomValidity('请输入8个数字')
   }
 })
-var password = document.getElementById('password')
+const password = document.getElementById('password')
 password.addEventListener('input', () => {
   password.setCustomValidity('')
   password.checkValidity()
@@ -29,12 +29,12 @@ password.addEventListener('invalid', () => {
 
 // 验证码
 var code = ''
-var canvas = document.getElementById('canvas')
+const canvas = document.getElementById('canvas')
 createCode(4)
 canvas.addEventListener('click', () => {
   createCode(4)
 })
-//生成验证码的方法
+//生成验证码方法
 function createCode(length) {
   // console.log(createCode)
   code = ''
@@ -136,7 +136,7 @@ function createCode(length) {
   }
 }
 
-var verify = document.getElementById('verify')
+const verify = document.getElementById('verify')
 verify.addEventListener('input', () => {
   verify.setCustomValidity('')
   verify.checkValidity()
@@ -147,18 +147,18 @@ verify.addEventListener('invalid', (e) => {
     verify.setCustomValidity('请输入验证码')
   }
 })
-var login = document.getElementById('login')
+const login = document.getElementById('login')
 login.addEventListener('click', () => {
   if (verify.value.toUpperCase() != code.toUpperCase()) {
     verify.setCustomValidity('验证码错误')
     createCode(4)
   }
 })
-var register = document.getElementById('register')
+const register = document.getElementById('register')
 register.onclick = function () {
-  let spotlight = document.getElementById('spotlight')
+  const spotlight = document.getElementById('spotlight')
   spotlight.classList.add('spotlight-box-register')
-  let main = document.getElementById('main')
+  const main = document.getElementById('main')
   main.classList.add('main-register')
   setInterval(() => {
     window.location.assign('./page/register/register.html')
