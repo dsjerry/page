@@ -126,7 +126,8 @@ body{
 }
 .form-item-input:focus{
   border-radius: 5px;
-  background-color: white;
+  background-color: whitesmoke;
+  border: none;
 }
 .form-item-input::placeholder{
   color: gainsboro;

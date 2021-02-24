@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>注册</title>
     <link rel="stylesheet" href="../../css/register/register.css" />
+    <script src="../../js/public/verify.js"></script>
+    <script src="../../js/public/showAlert.js"></script>
   </head>
   <body>
     <div class="please" id="please">请完成填写</div>
+
     <div class="main main-style" id="main">
+      <div class="to-login" id="toLogin">
+        <a href="">已有账号 </a>
+      </div>
       <!-- 标题 -->
       <div class="title" data-spotlight="用户注册">用户注册</div>
       <!-- 表单步骤条 -->
@@ -38,7 +44,7 @@
         >
       </div>
       <!-- 表单内容 -->
-      <form action="#" class="form">
+      <form action="" class="form">
         <div class="form-page-one" id="formPageOne">
           <div class="form-col">
             <div class="form-item">
@@ -57,7 +63,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="password"
+                id="userBQ"
                 class="form-item-input"
                 placeholder="管理员BQ"
                 maxlength="8"
@@ -85,7 +91,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="password"
+                id="passwordConfirm"
                 class="form-item-input"
                 placeholder="确认密码"
                 maxlength="8"
@@ -100,7 +106,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="password"
+                id="companyName"
                 class="form-item-input form-item-input-long"
                 placeholder="公司名称"
                 maxlength="8"
@@ -118,7 +124,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="username"
+                id="email"
                 class="form-item-input"
                 placeholder="E-mail"
                 maxlength="8"
@@ -131,7 +137,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="password"
+                id="website"
                 class="form-item-input"
                 placeholder="网址"
                 maxlength="8"
@@ -146,7 +152,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="password"
+                id="chatWay"
                 class="form-item-input"
                 placeholder="洽谈方式"
                 maxlength="8"
@@ -159,7 +165,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="password"
+                id="chatTitle"
                 class="form-item-input"
                 placeholder="洽谈标题"
                 maxlength="8"
@@ -174,7 +180,7 @@
             <div class="form-item">
               <input
                 type="text"
-                id="password"
+                id="phone"
                 class="form-item-input"
                 placeholder="电话"
                 maxlength="8"
@@ -193,7 +199,7 @@
               <label for="">登记号</label>
               <input
                 type="text"
-                id="username"
+                id="usernameShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"
@@ -206,7 +212,7 @@
               <label for="">管理员BQ</label>
               <input
                 type="text"
-                id="password"
+                id="userBQShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"
@@ -221,7 +227,7 @@
               <label for="">E-mail</label>
               <input
                 type="text"
-                id="username"
+                id="emailShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"
@@ -234,7 +240,7 @@
               <label for="">网址</label>
               <input
                 type="text"
-                id="password"
+                id="websiteShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"
@@ -249,7 +255,7 @@
               <label for="">洽谈方式</label>
               <input
                 type="text"
-                id="password"
+                id="chatWayShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"
@@ -262,7 +268,7 @@
               <label for="">洽谈标题</label>
               <input
                 type="text"
-                id="password"
+                id="chatTitleShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"
@@ -277,7 +283,7 @@
               <label for="">公司名称</label>
               <input
                 type="text"
-                id="password"
+                id="companyNameShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"
@@ -290,7 +296,7 @@
               <label for="">电话</label>
               <input
                 type="text"
-                id="password"
+                id="phoneShow"
                 class="form-item-input"
                 maxlength="8"
                 minlength="8"

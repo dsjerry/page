@@ -23,7 +23,7 @@ body{
 }
 .please-appear{
   top: 5%;
-  transition: .5s ease;
+  transition: 1s ease;
 }
 .main{
   position: absolute;
@@ -47,10 +47,42 @@ body{
   justify-content: center;
   align-items: center;
 }
+.to-login{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0.6em;
+  box-shadow: 4px #007cdb4f;
+  
+}
+.to-login > a{
+  color: rgba(0, 124, 219, 0.5);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.to-login > a::after{
+  content: '?';
+  color: orange;
+  font-weight: bold;
+}
+.to-login:hover::before{
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6em;
+  text-align: center;
+  content: '返回登录';
+  color: whitesmoke;
+  background-color: #007cdb;
+  /* background-color: orange; */
+  border-radius: 10px 0 10px 0;
+  transition: 1s ease;
+}
 .title{
   position: fixed;
   top: 5%;
-  font-size: 1.7em;
+  font-size: 1.8em;
   color:#005fa3;
   font-weight: bolder;
   cursor: pointer;
@@ -89,7 +121,15 @@ body{
 .step-item-circle-finish{
   color: white;
   background-color: #007cdb;
+  border: 5px double orange;
+  width: 1vw;
+  height: 1vw;
+  line-height: 1vw;
+  /* width: 1.5vw;
+  height: 1.5vw;
+  line-height: 1.5vw; */
 }
+
 .step-item-road{
   height: .8vh;
   width: 20%;

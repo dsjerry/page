@@ -1,4 +1,4 @@
-// 表单验证
+// 基础表单验证
 const username = document.getElementById('username')
 username.addEventListener('input', () => {
   username.setCustomValidity('')
@@ -149,7 +149,13 @@ verify.addEventListener('invalid', (e) => {
 })
 const login = document.getElementById('login')
 login.addEventListener('click', () => {
-  if (verify.value.toUpperCase() != code.toUpperCase()) {
+  let isUsernameOk = verifyAgain('username', username.value)
+  let isPasswordOk = verifyAgain('password', password.value)
+  console.log(isUsernameOk)
+  console.log(isPasswordOk)
+  if (isUsernameOk == false || isPasswordOk == false) {
+    alert('密码或账号格式错误')
+  } else if (verify.value.toUpperCase() != code.toUpperCase()) {
     verify.setCustomValidity('验证码错误')
     createCode(4)
   }
@@ -164,3 +170,15 @@ register.onclick = function () {
     window.location.assign('./page/register/register.html')
   }, 900)
 }
+
+// username.addEventListener('blur', (e) => {
+//   // console.log(typeof e.target.id)
+//   // console.log(e.target.value)
+//   let ele = e.target.id
+//   let val = e.target.value
+//   let isOk = verifyAgain(ele, val)
+//   console.log(isOk)
+//   if (!isOk) {
+//     alert('asd')
+//   }
+// })
