@@ -1,0 +1,178 @@
+/* 主要结构 */
+body{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.header{
+  height: 10vh;
+  line-height: 10vh;
+  background-color: #0769b4;
+}
+.title{
+  margin: 0;
+  display: inline;
+  float: left;
+}
+.title-style{
+  color: whitesmoke;
+}
+.title::before{
+  content: '💬';
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.logout{
+  float: right;
+  margin-right: 2em;
+}
+.logout:hover{
+  cursor: pointer;
+}
+.logout > a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: .8em;
+  padding: .8em;
+  background-color: #08497ab0;
+  border-radius: 5px;
+}
+.logout > a:hover{
+  color: white;
+  background-color: #2894e6;;
+}
+.main{
+  display: flex;
+}
+.aside{
+  flex: 1;
+  height: 90vh;
+}
+.aside-style{
+  background-color: #0769b4dc;
+}
+.section{
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+.section-style{
+  background-color: white;
+}
+/* .sec-header{
+  flex: 0 0 auto;
+  height: 5vh;
+  background-color: #0769b4dc;
+} */
+.sec-main{
+  flex: 1 0 auto;
+}
+.sec-footer{
+  flex: 0 0 auto;
+}
+.sec-footer-style{
+  background-color: brown;
+}
+
+/* 细分 */
+.aside-title{
+  color: #08497a;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+}
+.aside-title:hover{
+  cursor: default;
+}
+.slidebar{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  /* justify-content: center; */
+}
+.slidebar > li{
+  margin: auto;
+  width: 60%;
+  background-color: #0769b4;
+  text-align: center;
+  padding: 0.2em 1em;
+  height: 6vh;
+  line-height: 6vh;
+
+}
+.slidebar > li:first-child{
+  border-radius: 5px 5px 0 0 ;
+}
+.slidebar > li:last-child{
+  border-radius: 0 0 5px 5px;
+}
+.slidebar > li:hover{
+  /* transition: .5s ease-in-out; */
+  transition: .5s ease-in-out;
+  /* border: 2px dotted orange; */
+  transform: translateX(2vw);
+  background-color: #2894e6;
+  box-shadow: inset 0 0 5vh rgba(7, 105, 180, 1);
+  border-radius: 5px;
+}
+.slidebar > li:hover::after{
+  content: '>';
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  /* background-color: orange; */
+  height: 6vh;
+  width: 1vw;
+}
+.slidebar > li > a{
+  text-decoration: none;
+  font-size: 1.1em;
+  color: rgba(245, 245, 245, 0.849);
+  padding: 1em;
+}
+.slidebar > li > a:active{
+  /* transition: .5s ease-in-out; */
+  color: #0769b4;
+}
+
+.main-content > div{
+  position: absolute;
+  /* opacity: 0; */
+  display: none;
+  /* -webkit-transition: opacity 200ms linear;
+  -moz-transition: opacity 200ms linear;
+  -ms-transition: opacity 200ms linear;
+  transition: opacity 200ms linear; */
+}
+/* 选择一个ID与当前URL片段匹配的元素*/
+.main-content > div:target{
+  /* opacity: 1; */
+  display: block;
+}
+.m-c-header{
+  height: 10vh;
+  line-height: 10vh;
+}
+.m-c-header{
+  cursor: pointer;
+
+}
+.m-c-title{
+  display: inline;
+  margin-left: 2vw;
+  padding: 0.5vw 0.7vw;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: #0769b4dc;
+  text-decoration: none;
+}
+.m-c-title:hover::after{
+  content: ' \B×';
+  color: orange;
+  font-size: 0.8em;
+  cursor: pointer;
+}

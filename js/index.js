@@ -151,10 +151,9 @@ const login = document.getElementById('login')
 login.addEventListener('click', () => {
   let isUsernameOk = verifyAgain('username', username.value)
   let isPasswordOk = verifyAgain('password', password.value)
-  console.log(isUsernameOk)
-  console.log(isPasswordOk)
+
   if (isUsernameOk == false || isPasswordOk == false) {
-    alert('密码或账号格式错误')
+    showPageAlert()
   } else if (verify.value.toUpperCase() != code.toUpperCase()) {
     verify.setCustomValidity('验证码错误')
     createCode(4)
